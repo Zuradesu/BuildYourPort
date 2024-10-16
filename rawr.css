@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Qwitcher Grypen', sans-serif, poppins; /* Use your chosen font name */
+    background-color: #f0f0f0; /* Optional background color */
+    color: #333; /* Optional text color */
+    margin: 0;
+    padding: 20px; /* Optional padding */
+    background-color: #1A1A1A;
+    height: 100vh;
+}
+
+h1 {
+    color: #fff;
+    padding-left: 60px;
+    padding-top: 20px;
+    font-size: 140px;
+}
+
+h2 {
+    color: fff;
+    font-family: poppins;
+    padding-left: 60px;
+    padding-top: 60px;
+    font-size: 54px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.kotak {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: flex-start; /* Align items to the left */
+    margin: 20px; /* Add margin around the box */
+}
+
+.kotak input {
+    width: 400px;
+    padding: 12px;
+    margin-top: 18px;
+    margin-left: 60px;
+    border: none;
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.kotak input:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.kotak button {
+    width: 120px;
+    padding: 10px;
+    margin-top: 22px;
+    margin-left: 60px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgb(22, 22, 22);
+}
+
+.kotak button:hover {
+    background-color: rgba(115, 171, 255, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(115, 171, 255, 0.9);
+}
+
+.kotak button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 20px rgba(0, 102, 255, 0.5);
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 80px; /* Ukuran font lebih kecil untuk mobile */
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    h2 {
+        font-size: 36px; /* Ukuran font lebih kecil untuk mobile */
+        padding: 26px 2px 10px 4px;
+        margin-right: 0; /* Hapus margin kanan */
+    }
+
+    .kotak {
+        margin: 10px; /* Kurangi margin */
+        align-items: start; /* Tengah-kan item untuk mobile */
+    }
+
+    .kotak input {
+        width: 75%; /* Buat field input responsif, penuh di layar */
+        padding: 10px;
+        margin-left: 0; /* Hapus margin kiri */
+        margin-top: 10px;
+        border-radius: 12px;
+    }
+
+    .kotak button {
+        width: 25%; /* Buat tombol memenuhi lebar layar */
+        padding: 8px;
+        margin-left: 0; /* Hapus margin kiri */
+        margin-top: 16px;
+        font-size: 16px; /* Sesuaikan ukuran font untuk mobile */
+        border-radius: 12px;
+    }
+}
+

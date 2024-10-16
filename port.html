@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="sty.css" />
+    <title>Rawr</title>
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo">Rawr</a>
+
+      <nav>
+        <a href="" class="active">Home</a>
+        <a href="">Services</a>
+        <a href="">Skills</a>
+        <a href="">Educations</a>
+        <a href="">Experience</a>
+        <a href="">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-img">
+        <img src="sucipto.jpeg" id="logoutButton" alt="" />
+      </div>
+      <div class="home-content">
+        <h1>Hi, Im <span id="name"></span></h1>
+        <h3 class="typing-text">I'm a <span>Destroyer</span></h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus
+          eius minima hic exercitationem nobis maiores vitae facere numquam
+          obcaecati.
+        </p>
+
+        <div class="social-icons">
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+          <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <a href="" class="btn">Hire me</a>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    function nameData() {
+      const storedName = localStorage.getItem("name");
+      const nameElement = document.getElementById("name");
+
+      if (storedName) {
+        nameElement.textContent = storedName;
+      } else {
+        nameElement.textContent = "lu siapa jir";
+      }
+    }
+
+    const texts = [
+      "Destroyer",
+      "The Strongest",
+      "The One",
+      "The Creator",
+      "The Writer",
+    ];
+    let index = 0;
+
+    function changeText() {
+      const span = document.querySelector(".typing-text span");
+      span.textContent = texts[index];
+      index = (index + 1) % texts.length;
+    }
+
+    setInterval(changeText, 2000); // Ganti teks setiap 2 detik
+
+    document.addEventListener("DOMContentLoaded", nameData);
+
+    // Function for logout and clear localStorage
+    function logout() {
+      localStorage.clear(); // Clear local storage
+      window.location.href = "index.html";
+    }
+
+    // Add event listener to the image for logout
+    document.getElementById("logoutButton").addEventListener("click", logout);
+  </script>
+</html>
